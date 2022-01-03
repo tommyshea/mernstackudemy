@@ -63,6 +63,7 @@ const CreateProduct = () => {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault()
+      setError('')
       setLoading(true)
       const mediaUrl = await handleImageUpload()
       const url = `${baseUrl}/api/product`
